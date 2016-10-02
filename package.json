@@ -1,6 +1,7 @@
 {
   "name": "irc-radio-www",
   "version": "0.1.0",
+  "homepage": "http://rahatarmanahmed.github.io/irc-radio-www",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.6.1"
