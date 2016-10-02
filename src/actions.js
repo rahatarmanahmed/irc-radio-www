@@ -1,13 +1,7 @@
-import fetchPonyfill from 'fetch-ponyfill';
-
-const fetch = fetchPonyfill()
+import { addSong, skipSong } from './deepstream'
 
 export const queueSong = (url) => async (dispatch, getState) => {
-    const { queue, input } = getState()
-
-    // TODO: make some api request or somethin to update queue
-    dispatch(updateQueue([...queue, input]))
-
+    addSong(url)
     dispatch(updateInput(''))
 }
 
@@ -18,9 +12,11 @@ export const updateInput = (input) => {
     }
 }
 
-export const updateQueue = (queue) => {
+export const serverUpdate = (state) => {
     return {
-        type: 'updateQueue',
-        queue
+        type: 'serverUpdate',
+        state
     }
 }
+
+export const nextSong = () => async () => skipSong()

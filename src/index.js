@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
+import deepstream from 'deepstream.io-client-js'
 import App from './App'
 import './index.css'
 import reducer from './reducer'
+import { serverState } from './deepstream'
+import { serverUpdate } from './actions'
 
 const logger = store => next => action => {
     console.log('dispatching', action);
@@ -27,4 +30,6 @@ ReactDOM.render(
     document.getElementById('root')
 )
 
-// TODO: hook up deepstream.io here and have it dispatch actions to store
+serverState.subscribe(function (state) {
+    store.dispatch(serverUpdate(state))
+})
