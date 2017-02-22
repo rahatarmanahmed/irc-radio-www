@@ -7,7 +7,7 @@ import { updateInput, queueSong, nextSong } from './actions'
 const App = ({ queue, input, currentSong, onChangeInput, onSubmit, skipSong }) => (
     <div className="App container">
         <h1>IRC Radio @ #kellyirc</h1>
-        <a href="http://kelly.irc.sc:8000/stream.ogg">▶️ Now Playing: <marquee>{currentSong}</marquee></a>
+        <a href="http://rahat.bot.nu:8000/stream.ogg">▶️ Now Playing: <marquee>{currentSong}</marquee></a>
         <p><button type="button" onClick={skipSong}>skip this damn song</button></p>
         <div className="row">
             <div className="col-xs-12" style={{paddingBottom: '50px'}}>
