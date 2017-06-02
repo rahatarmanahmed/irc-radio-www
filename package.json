@@ -4,15 +4,15 @@
   "homepage": "http://rahatarmanahmed.github.io/irc-radio-www",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.6.1"
+    "react-scripts": "1.0.7"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.4",
-    "deepstream.io-client-js": "^1.1.1",
-    "fetch-ponyfill": "^3.0.1",
+    "deepstream.io-client-js": "^2.2.0",
+    "fetch-ponyfill": "^4.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-redux": "^4.4.5",
+    "react-redux": "^5.0.5",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0"
   },
